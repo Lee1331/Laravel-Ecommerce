@@ -89,7 +89,6 @@
 
                 {{-- Content container 2 --}}
                 {{-- setting the height on the child elements instead to prevent the svg dots from overlaping with the container when the view height changes --}}
-                {{-- <div class="w-full md:h-half flex flex-wrap px-12 pt-6 pb-6"> --}}
                 <div class="w-full flex flex-wrap px-12 pt-6 pb-6">
                     {{-- setting the height on the child elements instead to prevent the svg dots from overlaping with the container when the view height changes --}}
                     {{-- <div class="w-full lg:w-1/3 lg:ml-auto h-1/2 md:h-half sm:h-45vh bg-background-accent-1 md:pr-6 pl-0 md:pl-12 lg:pl-0 xl:pl-12 hidden lg:block"> --}}
