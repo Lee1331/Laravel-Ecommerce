@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="mb-4 flex bg-background-primary">
+    <div class="flex bg-background-primary w-screen h-screen">
         <div class="w-full h-full text-copy-secondary p-6 lg:p-12 flex justify-center">
             <div class="w-full md:w-1/2 lg:w-1/3">
                 <div class="card-header pb-2"><h1>Login</h1></div>
@@ -51,7 +51,7 @@
                                     <button type="submit" class="px-4 py-2 w-24 border rounded border-white hover:bg-background-accent1 bg-transparent shadow">
                                         {{ __('Login') }}
                                     </button>
-                                    
+
                                     <div class="inline-block flex content-center">
                                         @if (Route::has('password.request'))
                                         <a class="px-4 py-2 hover:text-copy-ternary" href="{{ route('password.request') }}">

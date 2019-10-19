@@ -18,6 +18,15 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+
+    {{-- links from welcome.blade.php --}}
+    {{-- <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
+    <script defer src="{{ mix('js/app.js') }}"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}"> --}}
+    <!-- Fonts -->
+    {{-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet"> --}}
+
 </head>
 <body class="theme-light">
     <div id="app">
@@ -47,6 +56,7 @@
 
         <main>
             @yield('content')
+            @include('partials.footer')
         </main>
     </div>
 </body>

@@ -2038,12 +2038,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'navbar-component',
   props: {
@@ -37680,7 +37674,18 @@ var render = function() {
           "div",
           { staticClass: "flex w-full sm:w-1/3 lg:w-1/2 justify-start" },
           [
-            _vm._m(0),
+            _c(
+              "a",
+              {
+                staticClass: "w-1/3 sm:w-auto pr-3",
+                attrs: { href: _vm.url + "" }
+              },
+              [
+                _c("h1", { staticClass: "inline text-xl w-1/3 sm:w-0" }, [
+                  _vm._v("Laravel 6")
+                ])
+              ]
+            ),
             _vm._v(" "),
             _c(
               "div",
@@ -37751,8 +37756,7 @@ var render = function() {
                         _c(
                           "a",
                           {
-                            staticClass:
-                              "navbar-item block sm:inline-block hover:text-copy-ternary active:text-copy-ternary",
+                            staticClass: "navbar-item",
                             attrs: { href: _vm.url + "about" }
                           },
                           [
@@ -37765,8 +37769,7 @@ var render = function() {
                         _c(
                           "a",
                           {
-                            staticClass:
-                              "navbar-item block sm:inline-block hover:text-copy-ternary",
+                            staticClass: "navbar-item",
                             attrs: { href: _vm.url + "store" }
                           },
                           [
@@ -37779,8 +37782,7 @@ var render = function() {
                         _c(
                           "a",
                           {
-                            staticClass:
-                              "navbar-item block sm:inline-block hover:text-copy-ternary",
+                            staticClass: "navbar-item",
                             attrs: { href: _vm.url + "blog" }
                           },
                           [
@@ -37793,8 +37795,7 @@ var render = function() {
                         _c(
                           "a",
                           {
-                            staticClass:
-                              "navbar-item block sm:inline-block hover:text-copy-ternary active:text-copy-ternary",
+                            staticClass: "navbar-item",
                             attrs: { href: _vm.url + "home" }
                           },
                           [
@@ -37818,10 +37819,7 @@ var render = function() {
                           [
                             _c(
                               "h3",
-                              {
-                                staticClass:
-                                  " text-xl mr-4 hover:text-copy-ternary"
-                              },
+                              { staticClass: "navbar-itembtext-xl mr-4" },
                               [_vm._v("Logout")]
                             )
                           ]
@@ -37853,8 +37851,7 @@ var render = function() {
                         _c(
                           "a",
                           {
-                            staticClass:
-                              "navbar-item block sm:inline-block hover:text-copy-ternary",
+                            staticClass: "navbar-item",
                             attrs: { href: _vm.url + "about" }
                           },
                           [
@@ -37867,8 +37864,7 @@ var render = function() {
                         _c(
                           "a",
                           {
-                            staticClass:
-                              "navbar-item block sm:inline-block hover:text-copy-ternary",
+                            staticClass: "navbar-item",
                             attrs: { href: _vm.url + "store" }
                           },
                           [
@@ -37881,8 +37877,7 @@ var render = function() {
                         _c(
                           "a",
                           {
-                            staticClass:
-                              "navbar-item block sm:inline-block hover:text-copy-ternary",
+                            staticClass: "navbar-item",
                             attrs: { href: _vm.url + "blog" }
                           },
                           [
@@ -37895,8 +37890,7 @@ var render = function() {
                         _c(
                           "a",
                           {
-                            staticClass:
-                              "navbar-item block sm:inline-block hover:text-copy-ternary",
+                            staticClass: "navbar-item",
                             attrs: { href: _vm.url + "login" }
                           },
                           [
@@ -37909,8 +37903,7 @@ var render = function() {
                         _c(
                           "a",
                           {
-                            staticClass:
-                              "navbar-item block sm:inline-block hover:text-copy-ternary",
+                            staticClass: "navbar-item",
                             attrs: { href: _vm.url + "register" }
                           },
                           [
@@ -37929,22 +37922,7 @@ var render = function() {
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      { staticClass: "w-1/3 sm:w-auto pr-3", attrs: { href: "" } },
-      [
-        _c("h1", { staticClass: "inline text-xl w-1/3 sm:w-0" }, [
-          _vm._v("Laravel 6")
-        ])
-      ]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

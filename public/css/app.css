@@ -667,6 +667,20 @@ video {
  * @import "components/forms";
  */
 
+.navbar-item {
+  display: block;
+}
+
+.navbar-item:hover, .navbar-item:active {
+  color: var(--text-copy-ternary);
+}
+
+@media (min-width: 640px) {
+  .navbar-item {
+    display: inline-block;
+  }
+}
+
 /**
  * This injects all of Tailwind's utility classes, generated based on your
  * config file.

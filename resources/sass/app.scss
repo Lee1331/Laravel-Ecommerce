@@ -45,6 +45,18 @@
   * @import "components/forms";
   */
 
+  .navbar-item {
+      @apply block;
+  }
+  .navbar-item:hover, .navbar-item:active {
+      @apply text-copy-ternary;
+  }
+
+  @screen sm {
+    .navbar-item {
+        @apply inline-block;
+    }
+  }
  /**
   * This injects all of Tailwind's utility classes, generated based on your
   * config file.
