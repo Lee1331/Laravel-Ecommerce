@@ -31,7 +31,7 @@
                 <div :class="open ? 'block ': 'hidden'" class="w-full md:w-0 flex-grow sm:flex sm:items-center sm:w-auto ">
                     <div class="text-sm sm:flex-grow " :class="open ? 'text-left mr-0' : ''">
                         <div v-if="auth" :class="open ? 'float-left' : 'float-right'">
-                            <a class="navbar-item block sm:inline-block hover:text-copy-ternary" :href="url + 'about'">
+                            <a class="navbar-item block sm:inline-block hover:text-copy-ternary active:text-copy-ternary" :href="url + 'about'">
                                 <h3 class="text-xl mr-4 ">About</h3>
                             </a>
                             <a class="navbar-item block sm:inline-block hover:text-copy-ternary" :href="url + 'store'">
@@ -40,7 +40,7 @@
                             <a class="navbar-item block sm:inline-block hover:text-copy-ternary" :href="url + 'blog'">
                                 <h3 class=" text-xl mr-4 ">Blog</h3>
                             </a>
-                            <a class="navbar-item block sm:inline-block hover:text-copy-ternary" :href="url + 'home'">
+                            <a class="navbar-item block sm:inline-block hover:text-copy-ternary active:text-copy-ternary" :href="url + 'home'">
                                 <h3 class=" text-xl mr-4 ">Home</h3>
                             </a>
                             <!-- <a class="navbar-item block sm:inline-block " :href="url + 'logout'">
@@ -69,10 +69,10 @@
                             </a>
 
                             <a class="navbar-item block sm:inline-block hover:text-copy-ternary" :href="url + 'login'">
-                                <h3 class=" text-xl mr-4 ">Login</h3>
+                                <h3 class="text-xl mr-4 ">Login</h3>
                             </a>
                             <a class="navbar-item block sm:inline-block hover:text-copy-ternary" :href="url + 'register'">
-                                <h3 class=" text-xl mr-4 ">Sign Up</h3>
+                                <h3 class="text-xl mr-4 ">Sign Up</h3>
                             </a>
                         </div>
                     </div>

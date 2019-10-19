@@ -37752,7 +37752,7 @@ var render = function() {
                           "a",
                           {
                             staticClass:
-                              "navbar-item block sm:inline-block hover:text-copy-ternary",
+                              "navbar-item block sm:inline-block hover:text-copy-ternary active:text-copy-ternary",
                             attrs: { href: _vm.url + "about" }
                           },
                           [
@@ -37794,7 +37794,7 @@ var render = function() {
                           "a",
                           {
                             staticClass:
-                              "navbar-item block sm:inline-block hover:text-copy-ternary",
+                              "navbar-item block sm:inline-block hover:text-copy-ternary active:text-copy-ternary",
                             attrs: { href: _vm.url + "home" }
                           },
                           [
@@ -37900,7 +37900,7 @@ var render = function() {
                             attrs: { href: _vm.url + "login" }
                           },
                           [
-                            _c("h3", { staticClass: " text-xl mr-4 " }, [
+                            _c("h3", { staticClass: "text-xl mr-4 " }, [
                               _vm._v("Login")
                             ])
                           ]
@@ -37914,7 +37914,7 @@ var render = function() {
                             attrs: { href: _vm.url + "register" }
                           },
                           [
-                            _c("h3", { staticClass: " text-xl mr-4 " }, [
+                            _c("h3", { staticClass: "text-xl mr-4 " }, [
                               _vm._v("Sign Up")
                             ])
                           ]

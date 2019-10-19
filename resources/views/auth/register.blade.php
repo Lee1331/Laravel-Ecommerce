@@ -16,7 +16,7 @@
                                 <label for="name" class="text-xl sm:text-2xl md:text-2xl">{{ __('Name') }}</label>
 
                                 <div class="flex items-center py-2">
-                                    <input id="name" type="text" class="appearance-none bg-transparent border-none w-full text-copy-primary py-1 px-2 leading-tight focus:outline-none form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                    <input id="name" type="text" class="appearance-none bg-transparent border-none w-full text-copy-primary py-1 px-2 leading-tight focus:outline-none form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="John Smith" required autocomplete="name" autofocus>
 
                                     @error('name')
                                         <span class="invalid-feedback" role="alert">
@@ -30,7 +30,7 @@
                                 <label for="email" class="text-xl sm:text-2xl md:text-2xl">{{ __('E-Mail Address') }}</label>
 
                                 <div class="flex items-center py-2">
-                                    <input id="email" type="email" class="appearance-none bg-transparent border-none w-full text-copy-primary py-1 px-2 leading-tight focus:outline-none form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                    <input id="email" type="email" class="appearance-none bg-transparent border-none w-full text-copy-primary py-1 px-2 leading-tight focus:outline-none form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="JohnSmith@gmail.com" required autocomplete="email">
 
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -44,7 +44,7 @@
                                 <label for="password" class="text-xl sm:text-2xl md:text-2xl">{{ __('Password') }}</label>
 
                                 <div class="flex items-center py-2">
-                                    <input id="password" type="password" class="appearance-none bg-transparent border-none w-full text-copy-primary py-1 px-2 leading-tight focus:outline-none form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                    <input id="password" type="password" class="appearance-none bg-transparent border-none w-full text-copy-primary py-1 px-2 leading-tight focus:outline-none form-control @error('password') is-invalid @enderror" name="password" placeholder="************" required autocomplete="new-password">
 
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
@@ -54,11 +54,11 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row pb-3">
+                            <div class="form-group row pb-6">
                                 <label for="password-confirm" class="text-xl sm:text-2xl md:text-2xl">{{ __('Confirm Password') }}</label>
 
                                 <div class="flex items-center py-2">
-                                    <input id="password-confirm" type="password" class="appearance-none bg-transparent border-none w-full text-copy-primary py-1 px-2 leading-tight focus:outline-none form-control" name="password_confirmation" required autocomplete="new-password">
+                                    <input id="password-confirm" type="password" class="appearance-none bg-transparent border-none w-full text-copy-primary py-1 px-2 leading-tight focus:outline-none form-control" name="password_confirmation" placeholder="************" required autocomplete="new-password">
                                 </div>
                             </div>
 

@@ -14,7 +14,7 @@
                             <div class="form-group row pb-3">
                                 <label for="email" class="text-xl sm:text-2xl md:text-2xl">{{ __('E-Mail Address') }}</label>
                                 <div class="flex items-center py-2">
-                                    <input id="email" type="email" class="appearance-none bg-transparent border-none w-full text-copy-primary py-1 px-2 leading-tight focus:outline-none form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                    <input id="email" type="email" class="appearance-none bg-transparent border-none w-full text-copy-primary py-1 px-2 leading-tight focus:outline-none form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="JohnSmith@gmail.com" required autocomplete="email" autofocus>
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -26,7 +26,7 @@
                             <div class="form-group row">
                                 <label for="password" class="text-xl sm:text-2xl md:text-2xl">{{ __('Password') }}</label>
                                 <div class="flex items-center py-2">
-                                    <input id="password" type="password" class="appearance-none bg-transparent border-none w-full text-copy-primary py-1 px-2 leading-tight focus:outline-none form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                    <input id="password" type="password" class="appearance-none bg-transparent border-none w-full text-copy-primary py-1 px-2 leading-tight focus:outline-none form-control @error('password') is-invalid @enderror" name="password" placeholder="************" required autocomplete="current-password">
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -51,14 +51,17 @@
                                     <button type="submit" class="px-4 py-2 w-24 border rounded border-white hover:bg-background-accent1 bg-transparent shadow">
                                         {{ __('Login') }}
                                     </button>
-                                    @if (Route::has('password.request'))
+                                    
+                                    <div class="inline-block flex content-center">
+                                        @if (Route::has('password.request'))
                                         <a class="px-4 py-2 hover:text-copy-ternary" href="{{ route('password.request') }}">
                                             {{ __('Forgot Your Password?') }}
                                         </a>
-                                    @endif
-                                    <a class="px-4 py-2 hover:text-copy-ternary" href="{{ route('register') }}">
-                                        {{ __('New? Register Now!') }}
-                                    </a>
+                                        @endif
+                                        <a class="px-4 py-2 hover:text-copy-ternary" href="{{ route('register') }}">
+                                            {{ __('New? Register Now!') }}
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
 
