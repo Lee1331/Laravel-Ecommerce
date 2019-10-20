@@ -37808,8 +37808,7 @@ var render = function() {
                         _c(
                           "a",
                           {
-                            staticClass:
-                              "dropdown-item hover:text-copy-ternary",
+                            staticClass: "navbar-item hover:text-copy-ternary",
                             attrs: {
                               href: _vm.url + "logout",
                               onclick:
@@ -37817,11 +37816,9 @@ var render = function() {
                             }
                           },
                           [
-                            _c(
-                              "h3",
-                              { staticClass: "navbar-itembtext-xl mr-4" },
-                              [_vm._v("Logout")]
-                            )
+                            _c("h3", { staticClass: "text-xl mr-4" }, [
+                              _vm._v("Logout")
+                            ])
                           ]
                         ),
                         _vm._v(" "),

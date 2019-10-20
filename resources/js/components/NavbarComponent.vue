@@ -40,10 +40,10 @@
                                 <h3 class=" text-xl mr-4 ">Home</h3>
                             </a>
 
-                            <a class="dropdown-item hover:text-copy-ternary"  :href="url + 'logout'"
+                            <a class="navbar-item hover:text-copy-ternary"  :href="url + 'logout'"
                                     onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
-                                <h3 class="navbar-itembtext-xl mr-4">Logout</h3>
+                                <h3 class="text-xl mr-4">Logout</h3>
                             </a>
 
                             <form id="logout-form" :action="url + 'logout'" method="POST" style="display: none;">
