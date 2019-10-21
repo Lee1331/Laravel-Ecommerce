@@ -13,7 +13,6 @@
                         {{ method_field('PUT') }}
                         @csrf
 
-
                         <div class="form-group row pb-6 ">
                             <label for="roles" class="text-xl sm:text-2xl md:text-2xl">{{ __('Role') }}</label>
                             <div class="flex content-center justify-between">
