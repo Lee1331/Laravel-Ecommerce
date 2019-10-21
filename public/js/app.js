@@ -2033,11 +2033,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'navbar-component',
   props: {
@@ -2045,6 +2040,9 @@ __webpack_require__.r(__webpack_exports__);
       type: Boolean,
       required: true,
       "default": false
+    },
+    username: {
+      type: String
     }
   },
   data: function data() {
@@ -37665,7 +37663,7 @@ var render = function() {
     "nav",
     {
       staticClass:
-        "z-1 sticky top-0 flex flex-wrap h-2/12 py-3 px-5 shadow-xl justify-between\nbg-background-primary\ntext-copy-secondary",
+        "z-1 sticky top-0 flex flex-wrap h-2/12 py-3 px-5 shadow-xl justify-between bg-background-primary text-copy-secondary",
       class: _vm.open ? "items-center" : "items-start"
     },
     [
@@ -37800,7 +37798,7 @@ var render = function() {
                           },
                           [
                             _c("h3", { staticClass: " text-xl mr-4 " }, [
-                              _vm._v("Home")
+                              _vm._v(_vm._s(this.username))
                             ])
                           ]
                         ),

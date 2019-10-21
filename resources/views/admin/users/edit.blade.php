@@ -18,10 +18,10 @@
                             <label for="roles" class="text-xl sm:text-2xl md:text-2xl">{{ __('Role') }}</label>
                             <div class="flex content-center justify-between">
                                 @foreach ($roles as $role)
-                                <div>
-                                    <label class="text-xl sm:text-2xl md:text-2xl mr-2">{{ $role->name }}</label>
-                                    <input type="checkbox" class="py-1 px-2 mr-4 leading-tight" name="roles[]" value="{{ $role->id }}" placeholder="************">
-                                </div>
+                                    <div>
+                                        <label class="text-xl sm:text-2xl md:text-2xl mr-2">{{ $role->name }}</label>
+                                        <input type="checkbox" class="py-1 px-2 mr-4 leading-tight" name="roles[]" value="{{ $role->id }}" placeholder="************">
+                                    </div>
                                 @endforeach
                             </div>
                         </div>

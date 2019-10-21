@@ -1,15 +1,10 @@
 <template>
-    <nav class="z-1 sticky top-0 flex flex-wrap h-2/12 py-3 px-5 shadow-xl justify-between
-    bg-background-primary
-    text-copy-secondary"
-    :class="open ? 'items-center' : 'items-start' ">
-
+    <nav class="z-1 sticky top-0 flex flex-wrap h-2/12 py-3 px-5 shadow-xl justify-between bg-background-primary text-copy-secondary" :class="open ? 'items-center' : 'items-start' ">
         <div class="w-full inline-block flex flex-wrap">
             <div class="flex w-full sm:w-1/3 lg:w-1/2 justify-start">
                 <a class="w-1/3 sm:w-auto pr-3" :href="url + ''">
                     <h1 class="inline text-xl w-1/3 sm:w-0">Laravel 6</h1>
                 </a>
-
                 <div class="flex justify-end w-2/3 md:w-0 lg:w-auto sm:hidden">
                     <div class="block sm:hidden" :class="open ? 'flex justify-end' : ''">
                         <button @click="toggle" class="flex items-center px-3 py-2 border rounded border-white hover:text-copy-ternary hover:border-white">
@@ -37,7 +32,7 @@
                                 <h3 class=" text-xl mr-4 ">Blog</h3>
                             </a>
                             <a class="navbar-item" :href="url + 'home'">
-                                <h3 class=" text-xl mr-4 ">Home</h3>
+                                <h3 class=" text-xl mr-4 ">{{ this.username }}</h3>
                             </a>
 
                             <a class="navbar-item hover:text-copy-ternary"  :href="url + 'logout'"
@@ -85,6 +80,9 @@ export default {
             type: Boolean,
             required: true,
             default: false
+        },
+        username: {
+            type: String
         }
     },
     data(){

@@ -48,7 +48,7 @@
 
         @if(Route::has('login'))
             @auth
-                <navbar-component :auth="true"></navbar-component>
+                <navbar-component :auth="true" username="{{  Auth::user()->name  }}"></navbar-component>
             @else
                 <navbar-component :auth="false"></navbar-component>
             @endauth
