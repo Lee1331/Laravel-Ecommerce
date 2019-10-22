@@ -91,6 +91,22 @@ return [
             'prefix_indexes' => true,
         ],
 
+        // create a database for testing
+        // 'testing' => [
+            'mysql_testing' => [
+                'driver'   => 'mysql',
+                'host' => env('TEST_DB_HOST', 'localhost'),
+                // 'database' => ':memory:',
+                'database' => env('TEST_DB_DATABASE', 'forge'),
+                'username' => env('TEST_DB_USERNAME', 'forge'),
+                'password' => env('TEST_DB_PASSWORD', ''),
+                'charset' => 'utf8',
+                'collation' => 'utf8_unicode_ci',
+                'prefix' => '',
+                'strict' => false,
+            ],
+        // ],
+
     ],
 
     /*

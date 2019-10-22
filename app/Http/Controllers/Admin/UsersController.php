@@ -21,6 +21,15 @@ class UsersController extends Controller
      */
     public function index()
     {
+        // $admin = factory(User::class)->create();
+        // $adminRole = Role::where('name', 'admin')->first();
+        // $admin->roles()->attach($adminRole);
+        // dd($admin->roles);
+
+        if(Gate::denies('manage-users')){
+            return redirect(route('login'));
+        }
+
         $users = User::all();
         return view('admin.users.index', compact('users'));
     }
