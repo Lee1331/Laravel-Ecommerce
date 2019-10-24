@@ -69,6 +69,9 @@ class UsersController extends Controller
         //get all roles from the request and attach them to the user
         $user->roles()->sync($request->roles);
 
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->save();
         return redirect()->route('admin.users.index');
     }
 
