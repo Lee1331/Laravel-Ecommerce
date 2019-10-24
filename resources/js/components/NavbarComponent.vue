@@ -1,5 +1,5 @@
 <template>
-    <nav class="z-1 sticky top-0 flex flex-wrap h-2/12 py-3 px-5 shadow-xl justify-between md:justify-center bg-background-primary text-copy-secondary" :class="open ? 'items-center' : 'items-start' ">
+    <nav class="sticky top-0 z-10 flex flex-wrap h-2/12 py-3 px-5 shadow-xl justify-between md:justify-center bg-background-primary text-copy-secondary opacity-100" :class="open ? 'items-center' : 'items-start' ">
         <div class="w-full md:w-3/4 inline-block flex flex-wrap">
             <div class="flex w-full sm:w-1/3 lg:w-1/2 justify-start">
                 <a class="w-1/3 sm:w-auto pr-3" :href="url + ''">
@@ -19,17 +19,17 @@
             </div>
 
                 <!-- add hover animations and color change using udemy vue vids -->
-                <div :class="open ? 'block ': 'hidden'" class="w-full md:w-0 flex-grow sm:flex sm:items-center sm:w-auto  ">
-                    <div class="text-sm sm:flex-grow " :class="open ? 'text-left mr-0' : ''">
+                <div :class="open ? 'block ': 'hidden'" class="w-full md:w-0 flex-grow sm:flex sm:items-center sm:w-auto   ">
+                    <div class="text-sm sm:flex-grow  " :class="open ? 'text-left mr-0' : ''">
                         <div :class="open ? 'float-left' : 'float-right'">
                             <a class="navbar-item" :href="url + 'about'">
                                 <h3 class="text-xl mr-4 ">About</h3>
                             </a>
                             <a class="navbar-item" :href="url + 'store'">
-                                <h3 class=" text-xl mr-4 ">Store</h3>
+                                <h3 class="text-xl mr-4 ">Store</h3>
                             </a>
                             <a class="navbar-item" :href="url + 'blog'">
-                                <h3 class=" text-xl mr-4 ">Blog</h3>
+                                <h3 class="text-xl mr-4 ">Blog</h3>
                             </a>
                             <!-- use Vuex to handle dropdown state -->
                             <div v-if="auth" class="inline-block">

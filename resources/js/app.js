@@ -23,6 +23,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('navbar-component', require('./components/NavbarComponent.vue').default);
 Vue.component('hamburger-component', require('./components/HamburgerComponent.vue').default);
 Vue.component('dropdown-component', require('./components/DropdownComponent.vue').default);
+Vue.component('pack-component', require('./components/PackComponent.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

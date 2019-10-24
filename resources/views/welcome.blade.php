@@ -3,8 +3,8 @@
 
     {{-- Landing page banner --}}
         <div class="mb-4 flex bg-background-primary">
-            <div class="w-screen h-screen sm:h-s-half object-fill overflow-hidden bg-left-top lg:bg-left flex justify-center opacity-50 " style="background-image: url({{ asset('img/cassette.jpeg') }});">
-                    <div class="w-full lg:w-3/4 h-full text-copy-secondary p-6 lg:p-12">
+            <div class="w-screen h-screen sm:h-s-half object-fill overflow-hidden bg-left-top lg:bg-left flex justify-center opacity-50" style="background-image: url({{ asset('img/cassette.jpeg') }});">
+                    <div class="w-full lg:w-3/4 h-full text-copy-secondary p-6 lg:p-12 ">
                         <div class="w-full md:w-1/2 lg:w-1/3">
                             <h1 class="text-2xl sm:text-4xl md:text-4xl pb-3">Welcome to our new site!</h1>
                             <h3 class="text-xl sm:text-2xl md:text-2xl">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </h3>

@@ -23,3 +23,9 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
 
     Route::resource('/users', 'UsersController', ['except' => ['show' , 'create', 'store']]);
 });
+
+// Route::namespace('Store')->prefix('store')->name('store.')->group(function(){
+
+//     Route::resource('/', 'StoreController');
+// });
+Route::resource('store', 'StoreController');

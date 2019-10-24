@@ -45,18 +45,47 @@
   * @import "components/forms";
   */
 
-  .navbar-item {
-      @apply block;
-  }
-  .navbar-item:hover, .navbar-item:active {
-      @apply text-copy-ternary;
-  }
-
-  @screen sm {
-    .navbar-item {
-        @apply inline-block;
+    .banner-header-text {
+        // @apply text-2xl;
+        @apply text-3xl;
     }
-  }
+    .h-25 {
+        height: 40%;
+    }
+
+    .navbar-item {
+        @apply block;
+    }
+    .navbar-item:hover, .navbar-item:active {
+        @apply text-copy-ternary;
+    }
+
+    .max-h-xs{
+        max-height: 20rem;
+    }
+    .max-h-sm{
+        max-height: 24rem;
+    }
+    .max-h-md{
+        max-height: 28rem;
+    }
+
+    @screen sm {
+        .banner-header-text {
+            @apply text-4xl;
+        }
+        .navbar-item {
+            @apply inline-block;
+        }
+        .max-h-sm{
+            max-height: 24rem;
+        }
+        .max-h-md{
+            max-height: 28rem;
+        }
+
+    }
+
  /**
   * This injects all of Tailwind's utility classes, generated based on your
   * config file.
@@ -110,20 +139,43 @@
 .h-s-half{
     height: 50vh;
 }
+
+.h-third{
+    height: 33.333333vh;
+}
+.h-quarter{
+    height: 25vh;
+}
+
 @media (min-width: 640px) {
     .sm\:h-s-half {
         height: 50vh;
+    }
+    .sm\:h-third {
+        height: 33.333333vh;
+    }
+    .sm\:h-quarter {
+        height: 25vh;
     }
 }
 @media (min-width: 768px) {
     .md\:h-s-half {
         height: 50vh;
     }
+    .md\:h-third {
+        height: 33.333333vh;
+    }
+    .md\:h-quarter {
+        height: 25vh;
+    }
 }
 
 @media (min-width: 1024px) {
     .lg\:h-s-half {
         height: 50vh;
+    }
+    .lg\:h-quarter {
+        height: 25vh;
     }
 }
 
