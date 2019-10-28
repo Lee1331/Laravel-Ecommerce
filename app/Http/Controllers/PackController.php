@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\pack;
 use Illuminate\Http\Request;
 
-class StoreController extends Controller
+class PackController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,13 +14,7 @@ class StoreController extends Controller
      */
     public function index()
     {
-        // $drumPacks = SamplePack::where->
-        //use scopes? to reduce repetition - https://laravel.com/docs/5.8/eloquent#query-scopes
-        // $drumPacks = DB::table('sample_packs')->inRandomOrder()->take(5)->get();
-        // $bassPacks = DB::table('sample_packs')->inRandomOrder()->take(5)->get();
-        // $collections = DB::table('sample_packs')->inRandomOrder()->take(5)->get();
-
-        return view('store.index');
+        //
     }
 
     /**
@@ -46,10 +41,10 @@ class StoreController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\pack  $pack
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(pack $pack)
     {
         //
     }
@@ -57,10 +52,10 @@ class StoreController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\pack  $pack
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(pack $pack)
     {
         //
     }
@@ -69,10 +64,10 @@ class StoreController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\pack  $pack
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, pack $pack)
     {
         //
     }
@@ -80,10 +75,10 @@ class StoreController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\pack  $pack
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(pack $pack)
     {
         //
     }

@@ -19,7 +19,7 @@
             </div>
 
                 <!-- add hover animations and color change using udemy vue vids -->
-                <div :class="open ? 'block ': 'hidden'" class="w-full md:w-0 flex-grow sm:flex sm:items-center sm:w-auto   ">
+                <div :class="open ? 'block ': 'hidden'" class="w-full md:w-0 flex-grow sm:flex sm:items-center sm:w-auto">
                     <div class="text-sm sm:flex-grow  " :class="open ? 'text-left mr-0' : ''">
                         <div :class="open ? 'float-left' : 'float-right'">
                             <a class="navbar-item" :href="url + 'about'">

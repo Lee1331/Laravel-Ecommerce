@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 
 use App\User;
 use App\Role;
+use App\Pack;
 
 class UserTableSeeder extends Seeder
 {
@@ -16,6 +17,18 @@ class UserTableSeeder extends Seeder
     {
         User::truncate();
         DB::table('role_user')->truncate();
+
+        factory(App\User::class, 20)->create()->each(function($user){
+            $user->roles()->attach(Role::where('name', 'user')->first());
+        });
+
+        factory(App\User::class, 5)->create()->each(function($user){
+            $user->roles()->attach(Role::where('name', 'author')->first());
+
+            // factory(App\Pack::class)->create()->each(function($pack){
+            //     $pack->owner()->save($user);
+            // });
+        });
 
         $adminRole = Role::where('name', 'admin')->first();
         $authorRole = Role::where('name','author')->first();

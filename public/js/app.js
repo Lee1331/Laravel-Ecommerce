@@ -2161,9 +2161,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     src: {
+      type: String,
+      required: true
+    },
+    name: {
       type: String,
       required: true
     }
@@ -2172,8 +2183,17 @@ __webpack_require__.r(__webpack_exports__);
     return {
       item: {
         image: this.src
-      }
+      },
+      zoomed: false
     };
+  },
+  methods: {
+    toggle: function toggle() {
+      this.zoomed = !this.zoomed;
+    } // packUrl(){
+    //     return 'store/' + this.name;
+    // }
+
   }
 });
 
@@ -6636,7 +6656,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".pack{\n  width: 257px;\n  height: 257px;\n}\n.pack-image{\n  max-width: 257px;\n  max-height: 257px;\n  /* width: 400px;\n    height: 400px; */\n}\n", ""]);
+exports.push([module.i, ".overlay-button {\n  opacity: 0;\n}\n.pack{\n  width: 257px;\n  height: 257px;\n}\n.pack-image{\n  max-width: 257px;\n  max-height: 257px;\n  /* width: 400px;\n    height: 400px; */\n}\n.pack-container:hover .overlay{\n  opacity: 1;\n  /* background: hsla(50, 0%, 0%, 0.6); */\n  background: bg-background-primary;\n  transition: 0.5s opacity ease-out;\n  cursor: pointer;\n}\n.pack-container:hover img{\n  background: bg-background-primary;\n  opacity: 0.25;\n  transition: 0.5s opacity ease-out;\n}\n.pack-container:hover .overlay-button{\n  opacity: 1;\n  transition: 0.5s opacity ease-out;\n}\n", ""]);
 
 // exports
 
@@ -38614,7 +38634,7 @@ var render = function() {
             "div",
             {
               staticClass:
-                "w-full md:w-0 flex-grow sm:flex sm:items-center sm:w-auto   ",
+                "w-full md:w-0 flex-grow sm:flex sm:items-center sm:w-auto",
               class: _vm.open ? "block " : "hidden"
             },
             [
@@ -38812,17 +38832,19 @@ var render = function() {
     "div",
     {
       staticClass:
-        "w-2/5 h-25 max-w-xs max-h-md rounded overflow-hidden shadow-lg mb-3 mr-3 sm:mr-0 sm:mb-0"
+        "pack-container w-2/5 h-25 max-w-xs max-h-md rounded overflow-hidden shadow-lg mb-3 mr-3 sm:mr-0 sm:mb-0"
     },
     [
-      _c("img", {
-        staticClass: "w-full",
-        attrs: { src: _vm.item.image, alt: "Sunset in the mountains" }
-      }),
-      _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
-      _vm._m(1)
+      _c("div", { staticClass: "overlay w-full h-full relative" }, [
+        _c("img", {
+          staticClass: "w-full",
+          attrs: { src: _vm.item.image, alt: "Sunset in the mountains" }
+        }),
+        _vm._v(" "),
+        _vm._m(0),
+        _vm._v(" "),
+        _vm._m(1)
+      ])
     ]
   )
 }
@@ -38837,7 +38859,7 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("p", { staticClass: "text-gray-700 text-base" }, [
-        _vm._v("\n        Author\n        ")
+        _vm._v("\n                Author\n                ")
       ])
     ])
   },
@@ -38850,27 +38872,27 @@ var staticRenderFns = [
         "span",
         {
           staticClass:
-            "inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+            "inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2"
         },
-        [_vm._v("#photography")]
+        [_vm._v("#Dubstep")]
       ),
       _vm._v(" "),
       _c(
         "span",
         {
           staticClass:
-            "inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
+            "inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2"
         },
-        [_vm._v("#travel")]
+        [_vm._v("#110 Loops")]
       ),
       _vm._v(" "),
       _c(
         "span",
         {
           staticClass:
-            "inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700"
+            "inline-block rounded-full px-3 py-1 text-sm font-semibold"
         },
-        [_vm._v("#winter")]
+        [_vm._v("#200 One Shots")]
       )
     ])
   }
