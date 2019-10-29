@@ -11,6 +11,10 @@ class Pack extends Model
         return $this->hasMany('App\Sample');
     }
 
+    public function tags(){
+        return $this->belongsToMany('App\Tag');
+    }
+
     public function owner(){
         return $this->belongsTo('App\User');
     }
