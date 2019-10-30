@@ -14,21 +14,20 @@ class StoreController extends Controller
      */
     public function index()
     {
-        // $drumPacks = SamplePack::where->
-        //use scopes? to reduce repetition - https://laravel.com/docs/5.8/eloquent#query-scopes
-        // $drumPacks = DB::table('sample_packs')->inRandomOrder()->take(5)->get();
-        // $bassPacks = DB::table('sample_packs')->inRandomOrder()->take(5)->get();
-        // $collections = DB::table('sample_packs')->inRandomOrder()->take(5)->get();
 
-        // $drumPacks = DB::table('packs')->where()->
-        // $drumPacks = Pack::has('tags')->where('name', 'drums')->get()->take(5);
         $drumPacks = Pack::whereHas('tags', function($q){
             $q->where('name', 'drums');
         })->get()->take(5);
-        
-        // dd($drumPacks);
 
-        return view('store.index', compact('drumPacks'));
+        $collections = Pack::whereHas('tags', function($q){
+            $q->where('name', 'collections');
+        })->get()->take(5);
+
+        $bassPacks = Pack::whereHas('tags', function($q){
+            $q->where('name', 'basses');
+        })->get()->take(5);
+
+        return view('store.index', compact('drumPacks', 'collections', 'bassPacks'));
     }
 
     /**

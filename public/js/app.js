@@ -38846,7 +38846,7 @@ var render = function() {
     "div",
     {
       staticClass:
-        "pack-container w-2/5 h-25 max-w-xs max-h-md rounded overflow-hidden shadow-lg mb-3 mr-3 sm:mr-0 sm:mb-0"
+        "pack-container w-full h-full rounded overflow-hidden shadow-lg mb-3 mr-3 sm:mr-0 sm:mb-0"
     },
     [
       _c("div", { staticClass: "overlay w-full h-full relative" }, [
@@ -38856,7 +38856,7 @@ var render = function() {
         }),
         _vm._v(" "),
         _c("div", { staticClass: "px-6 py-4" }, [
-          _c("div", { staticClass: "font-bold text-xl mb-2" }, [
+          _c("div", { staticClass: "font-bold text-l md:text-xl mb-2" }, [
             _vm._v(_vm._s(this.name))
           ]),
           _vm._v(" "),
@@ -38867,7 +38867,7 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "w-full px-3 py-2  sm:py-4" },
+          { staticClass: "w-full px-3 py-2  sm:py-3" },
           _vm._l(_vm.tags, function(tag) {
             return _c(
               "span",

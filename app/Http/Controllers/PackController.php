@@ -47,6 +47,7 @@ class PackController extends Controller
     public function show(pack $pack)
     {
         //
+        return view('store.show', compact('pack'));
     }
 
     /**

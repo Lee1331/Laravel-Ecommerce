@@ -1,16 +1,16 @@
 <template>
-    <div class="pack-container w-2/5 h-25 max-w-xs max-h-md rounded overflow-hidden shadow-lg mb-3 mr-3 sm:mr-0 sm:mb-0">
+    <div class="pack-container w-full h-full rounded overflow-hidden shadow-lg mb-3 mr-3 sm:mr-0 sm:mb-0">
         <!-- <a :href=" this.packUrl() "> -->
             <div class="overlay w-full h-full relative">
                     <!-- <button class="overlay-button px-4 py-2 w-24 border rounded border-white bg-background-secondary shadow absolute flex content-center">Store</!-->
                 <img class="w-full" :src=" item.image" alt="Sunset in the mountains">
 
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">{{ this.name }}</div>
+                    <div class="font-bold text-l md:text-xl mb-2">{{ this.name }}</div>
                     <p class="text-gray-700 text-base">by {{ this.author }}</p>
                 </div>
 
-                <div class="w-full px-3 py-2  sm:py-4">
+                <div class="w-full px-3 py-2  sm:py-3">
                     <!--
                         Example tags
                         <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2">#Dubstep</span>

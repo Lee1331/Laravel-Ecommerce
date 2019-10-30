@@ -29,3 +29,5 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
 //     Route::resource('/', 'StoreController');
 // });
 Route::resource('store', 'StoreController');
+
+Route::resource('pack', 'PackController');
