@@ -14,9 +14,10 @@ class CreatePacksTable extends Migration
     public function up()
     {
         Schema::create('packs', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('name');
-            $table->integer('author_id')->unsigned();
+            $table->unsignedBigInteger('author_id');
+            $table->foreign('author_id')->references('id')->on('users')->onDelete('cascade');
             $table->float('amount')->default('0.00');
 
             $table->timestamps();

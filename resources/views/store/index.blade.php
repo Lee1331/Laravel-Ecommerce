@@ -27,12 +27,12 @@
             <div class="w-full flex justify-around pb-2">
                 <h1 class="text-2xl pb-3">Drum Bundles</h1>
             </div>
+
             <div class="w-full flex flex-wrap justify-center">
-                <pack-component src="{{asset('img/packs/drumEssentials2.jpeg')}}"></pack-component>
-                <pack-component src="{{asset('img/packs/drumEssentials1.jpeg')}}"></pack-component>
-                <pack-component src="{{asset('img/packs/drumEssentials2.jpeg')}}"></pack-component>
-                <pack-component src="{{asset('img/packs/drumEssentials1.jpeg')}}"></pack-component>
-                <pack-component src="{{asset('img/packs/drumEssentials2.jpeg')}}"></pack-component>
+                @foreach( $drumPacks as $pack )
+                    {{-- <pack-component src="{{ asset('img/packs/drumEssentials2.jpeg') }}" name="{{ $pack->name }}" author="{{ $pack->owner->name }}" tags="{{ implode(', ', $pack->tags()->get()->pluck('name')->toArray())  }}"></pack-component> --}}
+                    <pack-component src="{{ asset('img/packs/drumEssentials2.jpeg') }}" name="{{ $pack->name }}" author="{{ $pack->owner->name }}" :tags="{{ json_encode($pack->tags()->get()->pluck('name')->toArray())  }}"></pack-component>
+                @endforeach
             </div>
         </div>
     </div>
@@ -41,12 +41,7 @@
 
     <div class="w-full py-6 flex content-center pb-6">
         <div class="w-full h-full text-copy-primary flex-wrap px-12 sm:px-6 justify-center ">
-            {{-- <div class="w-full flex justify-around pb-2">
-                <h1>Our Picks</h1>
-                <a href="{{ route('catalog.index') }}">
-                    <h1>View All...</h1>
-                </a>
-            </div> --}}
+
             <div class="w-full flex justify-around pb-2">
                 <h1 class="text-2xl pb-3">Collections</h1>
             </div>
@@ -69,12 +64,6 @@
 
     <div class="w-full py-6 flex content-center pb-6">
         <div class="w-full h-full text-copy-primary flex-wrap px-12 sm:px-6 justify-center ">
-            {{-- <div class="w-full flex justify-around pb-2">
-                <h1>Our Picks</h1>
-                <a href="{{ route('catalog.index') }}">
-                    <h1>View All...</h1>
-                </a>
-            </div> --}}
             <div class="w-full flex justify-around pb-2">
                 <h1 class="text-2xl pb-3">Bass Bundles</h1>
             </div>

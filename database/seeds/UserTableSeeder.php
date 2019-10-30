@@ -15,8 +15,10 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         User::truncate();
         DB::table('role_user')->truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         factory(App\User::class, 20)->create()->each(function($user){
             $user->roles()->attach(Role::where('name', 'user')->first());

@@ -16,8 +16,10 @@ class PackTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         Pack::truncate();
-
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+        
         // // Create 15 records of packs
         factory(App\Pack::class, 15)->create();
 

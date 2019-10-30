@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Pack;
 
 class StoreController extends Controller
 {
@@ -19,7 +20,15 @@ class StoreController extends Controller
         // $bassPacks = DB::table('sample_packs')->inRandomOrder()->take(5)->get();
         // $collections = DB::table('sample_packs')->inRandomOrder()->take(5)->get();
 
-        return view('store.index');
+        // $drumPacks = DB::table('packs')->where()->
+        // $drumPacks = Pack::has('tags')->where('name', 'drums')->get()->take(5);
+        $drumPacks = Pack::whereHas('tags', function($q){
+            $q->where('name', 'drums');
+        })->get()->take(5);
+        
+        // dd($drumPacks);
+
+        return view('store.index', compact('drumPacks'));
     }
 
     /**

@@ -6,16 +6,22 @@
                 <img class="w-full" :src=" item.image" alt="Sunset in the mountains">
 
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">Pack Name</div>
-                    <p class="text-gray-700 text-base">
-                    Author
-                    </p>
+                    <div class="font-bold text-xl mb-2">{{ this.name }}</div>
+                    <p class="text-gray-700 text-base">by {{ this.author }}</p>
                 </div>
 
-                <div class="w-full px-3 py-2 sm:px-6 sm:py-4">
-                    <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2">#Dubstep</span>
-                    <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2">#110 Loops</span>
-                    <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold">#200 One Shots</span>
+                <div class="w-full px-3 py-2  sm:py-4">
+                    <!--
+                        Example tags
+                        <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2">#Dubstep</span>
+                        <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2">#110 Loops</span>
+                        <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold">#200 One Shots</span>
+                    -->
+
+                    <span v-for="tag in tags" class="inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2">#{{ tag }}</span>
+
+                    <!-- <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2">{{ this.tags }}</span> -->
+
                 </div>
             </div>
         <!-- </a> -->
@@ -31,6 +37,14 @@
             },
             name: {
                 type: String,
+                required: true,
+            },
+            author: {
+                type: String,
+                required: true,
+            },
+            tags: {
+                type: Array,
                 required: true,
             }
         },

@@ -2168,6 +2168,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     src: {
@@ -2176,6 +2182,14 @@ __webpack_require__.r(__webpack_exports__);
     },
     name: {
       type: String,
+      required: true
+    },
+    author: {
+      type: String,
+      required: true
+    },
+    tags: {
+      type: Array,
       required: true
     }
   },
@@ -38841,62 +38855,36 @@ var render = function() {
           attrs: { src: _vm.item.image, alt: "Sunset in the mountains" }
         }),
         _vm._v(" "),
-        _vm._m(0),
+        _c("div", { staticClass: "px-6 py-4" }, [
+          _c("div", { staticClass: "font-bold text-xl mb-2" }, [
+            _vm._v(_vm._s(this.name))
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "text-gray-700 text-base" }, [
+            _vm._v("by " + _vm._s(this.author))
+          ])
+        ]),
         _vm._v(" "),
-        _vm._m(1)
+        _c(
+          "div",
+          { staticClass: "w-full px-3 py-2  sm:py-4" },
+          _vm._l(_vm.tags, function(tag) {
+            return _c(
+              "span",
+              {
+                staticClass:
+                  "inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2"
+              },
+              [_vm._v("#" + _vm._s(tag))]
+            )
+          }),
+          0
+        )
       ])
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "px-6 py-4" }, [
-      _c("div", { staticClass: "font-bold text-xl mb-2" }, [
-        _vm._v("Pack Name")
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text-gray-700 text-base" }, [
-        _vm._v("\n                Author\n                ")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-full px-3 py-2 sm:px-6 sm:py-4" }, [
-      _c(
-        "span",
-        {
-          staticClass:
-            "inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2"
-        },
-        [_vm._v("#Dubstep")]
-      ),
-      _vm._v(" "),
-      _c(
-        "span",
-        {
-          staticClass:
-            "inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2"
-        },
-        [_vm._v("#110 Loops")]
-      ),
-      _vm._v(" "),
-      _c(
-        "span",
-        {
-          staticClass:
-            "inline-block rounded-full px-3 py-1 text-sm font-semibold"
-        },
-        [_vm._v("#200 One Shots")]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
