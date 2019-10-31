@@ -2164,16 +2164,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     src: {
@@ -2204,10 +2194,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     toggle: function toggle() {
       this.zoomed = !this.zoomed;
-    } // packUrl(){
-    //     return 'store/' + this.name;
-    // }
-
+    }
   }
 });
 
@@ -38846,41 +38833,55 @@ var render = function() {
     "div",
     {
       staticClass:
-        "pack-container w-full h-full rounded overflow-hidden shadow-lg mb-3 mr-3 sm:mr-0 sm:mb-0"
+        "pack-container w-full h-full rounded overflow-hidden shadow-md mb-3 mr-3 sm:mr-0 sm:mb-0 "
     },
     [
-      _c("div", { staticClass: "overlay w-full h-full relative" }, [
-        _c("img", {
-          staticClass: "w-full",
-          attrs: { src: _vm.item.image, alt: "Sunset in the mountains" }
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "px-6 py-4" }, [
-          _c("div", { staticClass: "font-bold text-l md:text-xl mb-2" }, [
-            _vm._v(_vm._s(this.name))
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-gray-700 text-base" }, [
-            _vm._v("by " + _vm._s(this.author))
-          ])
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "w-full px-3 py-2  sm:py-3" },
-          _vm._l(_vm.tags, function(tag) {
-            return _c(
-              "span",
-              {
-                staticClass:
-                  "inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2"
-              },
-              [_vm._v("#" + _vm._s(tag))]
-            )
+      _c(
+        "div",
+        {
+          staticClass: "overlay w-full h-full relative hover:text-copy-ternary"
+        },
+        [
+          _c("img", {
+            staticClass: "w-full",
+            attrs: { src: _vm.item.image, alt: this.name + " pack" }
           }),
-          0
-        )
-      ])
+          _vm._v(" "),
+          _c("div", { staticClass: "px-6 py-4 cursor-default" }, [
+            _c(
+              "div",
+              {
+                staticClass: "font-bold text-l md:text-xl mb-2 cursor-pointer"
+              },
+              [_vm._v(_vm._s(this.name))]
+            ),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-gray-700 text-base cursor-pointer" }, [
+              _vm._v("by " + _vm._s(this.author))
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "w-full px-3 py-2 sm:py-3" },
+        _vm._l(_vm.tags, function(tag) {
+          return _c(
+            "span",
+            {
+              staticClass:
+                "inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2 cursor-pointer hover:text-copy-ternary"
+            },
+            [
+              _c("a", { attrs: { href: "/" } }, [
+                _vm._v("\n                #" + _vm._s(tag) + "\n            ")
+              ])
+            ]
+          )
+        }),
+        0
+      )
     ]
   )
 }

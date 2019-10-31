@@ -1,30 +1,20 @@
 <template>
-    <div class="pack-container w-full h-full rounded overflow-hidden shadow-lg mb-3 mr-3 sm:mr-0 sm:mb-0">
-        <!-- <a :href=" this.packUrl() "> -->
-            <div class="overlay w-full h-full relative">
-                    <!-- <button class="overlay-button px-4 py-2 w-24 border rounded border-white bg-background-secondary shadow absolute flex content-center">Store</!-->
-                <img class="w-full" :src=" item.image" alt="Sunset in the mountains">
-
-                <div class="px-6 py-4">
-                    <div class="font-bold text-l md:text-xl mb-2">{{ this.name }}</div>
-                    <p class="text-gray-700 text-base">by {{ this.author }}</p>
-                </div>
-
-                <div class="w-full px-3 py-2  sm:py-3">
-                    <!--
-                        Example tags
-                        <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2">#Dubstep</span>
-                        <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2">#110 Loops</span>
-                        <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold">#200 One Shots</span>
-                    -->
-
-                    <span v-for="tag in tags" class="inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2">#{{ tag }}</span>
-
-                    <!-- <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2">{{ this.tags }}</span> -->
-
-                </div>
+    <div class="pack-container w-full h-full rounded overflow-hidden shadow-md mb-3 mr-3 sm:mr-0 sm:mb-0 ">
+        <div class="overlay w-full h-full relative hover:text-copy-ternary">
+                <!-- <button class="overlay-button px-4 py-2 w-24 border rounded border-white bg-background-secondary shadow absolute flex content-center">Store</!-->
+            <img class="w-full" :src=" item.image" :alt="this.name + ' pack'">
+            <div class="px-6 py-4 cursor-default">
+                <div class="font-bold text-l md:text-xl mb-2 cursor-pointer">{{ this.name }}</div>
+                <p class="text-gray-700 text-base cursor-pointer">by {{ this.author }}</p>
             </div>
-        <!-- </a> -->
+        </div>
+        <div class="w-full px-3 py-2 sm:py-3">
+            <span v-for="tag in tags" class="inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2 cursor-pointer hover:text-copy-ternary">
+                <a href="/">
+                    #{{ tag }}
+                </a>
+            </span>
+        </div>
     </div>
 </template>
 
@@ -62,9 +52,6 @@
             toggle() {
                 this.zoomed = !this.zoomed
             },
-            // packUrl(){
-            //     return 'store/' + this.name;
-            // }
         }
     }
 </script>
