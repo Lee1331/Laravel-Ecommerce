@@ -5,7 +5,10 @@
             <img class="w-full" :src=" item.image" :alt="this.name + ' pack'">
             <div class="px-6 py-4 cursor-default">
                 <div class="font-bold text-l md:text-xl mb-2 cursor-pointer">{{ this.name }}</div>
-                <p class="text-gray-700 text-base cursor-pointer">by {{ this.author }}</p>
+                <div class="flex justify-between">
+                    <p class="text-gray-700 text-base mb-1 cursor-pointer">by {{ this.author }}</p>
+                    <p class="text-gray-700 text-base cursor-pointer">{{ displayAmount }}</p>
+                </div>
             </div>
         </div>
         <div class="w-full px-3 py-2 sm:py-3">
@@ -21,6 +24,10 @@
 <script>
     export default {
         props: {
+            amount: {
+                type: Number,
+                required: true,
+            },
             src: {
                 type: String,
                 required: true,
@@ -52,6 +59,15 @@
             toggle() {
                 this.zoomed = !this.zoomed
             },
+        },
+
+        computed: {
+            displayAmount: function(){
+                if(! this.amount){
+                    return 'free';
+                }
+                return `£${this.amount}.00`;
+            }
         }
     }
 </script>

@@ -26,7 +26,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}"> --}}
     <!-- Fonts -->
     {{-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet"> --}}
-
+    <script src="https://kit.fontawesome.com/f0c0529312.js" crossorigin="anonymous"></script>
 </head>
 <body class="theme-light">
     <div id="app">

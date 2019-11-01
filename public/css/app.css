@@ -5023,8 +5023,8 @@ video {
 }
 
 .theme-dark {
-  --bg-background-primary: #22252E;
-  --bg-background-secondary: #22252E;
+  --bg-background-primary: #F4F5F5;
+  --bg-background-secondary: #747A7F;
   --bg-background-ternary: #22252E;
   --bg-background-accent-1: #22252E;
   --bg-background-accent-2: #22252E;

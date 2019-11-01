@@ -31,7 +31,7 @@
                 @foreach( $drumPacks as $pack )
                     <a href="{{ route('pack.show', $pack) }}" class="w-2/5 h-25 max-w-xs max-h-md">
                         {{-- <pack-component src="{{ asset('img/packs/drumEssentials2.jpeg') }}" name="{{ $pack->name }}" author="{{ $pack->owner->name }}" tags="{{ implode(', ', $pack->tags()->get()->pluck('name')->toArray())  }}"></pack-component> --}}
-                        <pack-component src="{{ asset('img/packs/drumEssentials2.jpeg') }}" name="{{ $pack->name }}" author="{{ $pack->owner->name }}" :tags="{{ json_encode($pack->tags()->get()->pluck('name')->toArray())  }}"></pack-component>
+                        <pack-component src="{{ asset('img/packs/drumEssentials2.jpeg') }}" name="{{ $pack->name }}" author="{{ $pack->owner->name }}" :tags="{{ json_encode($pack->tags()->get()->pluck('name')->toArray())  }}" :amount="{{ $pack->amount }}"></pack-component>
                     </a>
                 @endforeach
             </div>
@@ -48,7 +48,7 @@
                 <div class="w-full flex flex-wrap justify-center">
                     @foreach( $collections as $pack )
                         <a href="{{ route('pack.show', $pack) }}" class="w-2/5 h-25 max-w-xs max-h-md">
-                            <pack-component src="{{ asset('img/packs/drumEssentials1.jpeg') }}" name="{{ $pack->name }}" author="{{ $pack->owner->name }}" :tags="{{ json_encode($pack->tags()->get()->pluck('name')->toArray())  }}"></pack-component>
+                            <pack-component src="{{ asset('img/packs/drumEssentials1.jpeg') }}" name="{{ $pack->name }}" author="{{ $pack->owner->name }}" :tags="{{ json_encode($pack->tags()->get()->pluck('name')->toArray())  }}" :amount="{{ $pack->amount }}"></pack-component>
                         </a>
                     @endforeach
                 </div>
@@ -65,7 +65,7 @@
             <div class="w-full flex flex-wrap justify-center">
                 @foreach( $bassPacks as $pack )
                     <a href="{{ route('pack.show', $pack) }}" class="w-2/5 h-25 max-w-xs max-h-md">
-                        <pack-component src="{{ asset('img/packs/drumEssentials2.jpeg') }}" name="{{ $pack->name }}" author="{{ $pack->owner->name }}" :tags="{{ json_encode($pack->tags()->get()->pluck('name')->toArray())  }}"></pack-component>
+                        <pack-component src="{{ asset('img/packs/drumEssentials2.jpeg') }}" name="{{ $pack->name }}" author="{{ $pack->owner->name }}" :tags="{{ json_encode($pack->tags()->get()->pluck('name')->toArray()) }}" :amount="{{ $pack->amount }}"></pack-component>
                     </a>
                 @endforeach
             </div>
