@@ -3,8 +3,8 @@
 
     {{-- Landing page banner --}}
         <div class="mb-4 flex bg-background-primary">
-            <div class="w-screen h-screen sm:h-s-half object-fill overflow-hidden bg-left-top lg:bg-left flex justify-center opacity-50 bg-no-repeat bg-cover bg-auto" style="background-image: url({{ asset('img/cassette.jpeg') }});">
-                    <div class="w-full lg:w-3/4 h-full text-copy-secondary p-6 lg:p-12 ">
+            <div class="w-screen h-auto object-fill  bg-left-top lg:bg-left flex justify-center opacity-50 bg-no-repeat bg-cover sm:bg-auto" style="background-image: url({{ asset('img/cassette.jpeg') }});">
+                    <div class="w-full lg:w-3/4  text-copy-secondary p-6 lg:p-12 ">
                         <div class="w-full md:w-1/2 lg:w-1/3">
                             <h1 class="text-2xl sm:text-4xl md:text-4xl pb-3">Welcome to our new site!</h1>
                             <h3 class="text-xl sm:text-2xl md:text-2xl">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </h3>
@@ -26,7 +26,7 @@
 
                 {{-- look at adding a grid to instead of the line below - when the screen is small give the h3 div w-full --}}
                 <div class="w-full lg:w-1/3 lg:mr-auto h-1/2 md:h-half sm:h-45vh bg-background-accent-1 md:pl-6 pr-0 md:pr-12 lg:pr-0 xl:pr-12">
-                    <div class="inline-block text-left break-words">
+                    <div class="inline-block text-left break-words pt-3 sm:pt-0">
                         <h1 class="text-2xl md:text-3xl pb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1>
                     </div>
                     <div class="w-full md:w-auto inline-block lg:text-left break-words text-lg">
@@ -44,7 +44,7 @@
                 {{-- setting the height on the child elements instead to prevent the svg dots from overlaping with the container when the view height changes --}}
                 {{-- <div class="w-full lg:w-1/3 lg:ml-auto h-1/2 md:h-half sm:h-45vh bg-background-accent-1 md:pr-6 pl-0 md:pl-12 lg:pl-0 xl:pl-12 hidden lg:block"> --}}
                 <div class="w-full lg:w-1/3 lg:ml-auto h-1/2  sm:h-45vh bg-background-accent-1 md:pr-6 pl-0 md:pl-12 lg:pl-0 xl:pl-12 hidden lg:block">
-                    <div class="inline-block text-right break-words">
+                    <div class="inline-block text-right break-words pt-3 sm:pt-0">
                         <h1 class="text-2xl md:text-3xl pb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1>
                     </div>
                     <div class="w-full md:w-auto inline-block text-right break-words text-lg">
@@ -60,7 +60,7 @@
                 {{-- setting the height on the child elements instead to prevent the svg dots from overlaping with the container when the view height changes --}}
                 {{-- <div class="w-full lg:w-1/3 lg:ml-auto h-1/2 md:h-half sm:h-45vh bg-background-accent-1 md:pr-12 pl-0 md:pl-12 lg:pl-0 xl:pl-12 block lg:hidden"> --}}
                 <div class="w-full lg:w-1/3 lg:ml-auto h-1/2  sm:h-45vh bg-background-accent-1 md:pr-12 pl-0 md:pl-12 lg:pl-0 xl:pl-12 block lg:hidden">
-                    <div class="inline-block text-right break-words">
+                    <div class="inline-block text-right break-words pt-3 sm:pt-0">
                         <h1 class="text-2xl md:text-3xl pb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1>
                     </div>
                     <div class="w-full md:w-auto inline-block text-right break-words text-lg">

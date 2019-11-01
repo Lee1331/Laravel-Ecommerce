@@ -151,7 +151,7 @@
                 </a>
             </div>
 
-            <div class="flex-none sm:flex-1 md:flex-none justify-center">
+            <div class="flex-none sm:flex-1 md:flex-none justify-center px-4">
                 <theme-component></theme-component>
             </div>
             <div class="flex-1 justify-end md:w-0 lg:w-auto sm:hidden">
@@ -165,9 +165,9 @@
                     </button>
                 </div>
             </div>
-            <div class="flex-auto sm:flex-1 sm:justify-end w-full sm:w-0
-            flex-grow
-             sm:items-center">
+            <!-- <div class="flex-auto sm:flex-1 sm:justify-end w-full sm:w-0 flex-grow sm:items-center"> -->
+                <div class="flex-auto md:flex-1 sm:justify-end w-full sm:w-0 sm:items-center ">
+
                 <!-- <div class="flex justify-end md:w-0 lg:w-auto sm:hidden">
                     <div class="block " :class="this.window.width < 640 ? 'flex justify-end' : 'hidden'">
                         <button @click="toggle" class="flex items-center px-3 py-2 border rounded border-white hover:text-copy-ternary hover:border-white">

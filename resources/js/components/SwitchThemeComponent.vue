@@ -5,6 +5,7 @@
     </svg> -->
     <div class="flex justify-center">
         <i class="fas fa-adjust fa-2x"></i>
+        <!-- if user pushes button, change loaded style sheet - create seperate stylesheets for each theme -->
     </div>
 </template>
 
