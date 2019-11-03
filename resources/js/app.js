@@ -24,6 +24,7 @@ Vue.component('navbar-component', require('./components/NavbarComponent.vue').de
 Vue.component('hamburger-component', require('./components/HamburgerComponent.vue').default);
 Vue.component('dropdown-component', require('./components/DropdownComponent.vue').default);
 Vue.component('pack-component', require('./components/PackComponent.vue').default);
+Vue.component('pack-show-component', require('./components/PackShowComponent.vue').default);
 Vue.component('theme-component', require('./components/SwitchThemeComponent.vue').default);
 
 /**
