@@ -11,6 +11,7 @@ $factory->define(Pack::class, function (Faker $faker) {
 
     return [
         'name' => $faker->sentence(),
+        'description' => $faker->paragraph(),
         'author_id' => function(){
             $user = User::inRandomOrder()->first();
             $authorRole = Role::where('name', 'author')->first();

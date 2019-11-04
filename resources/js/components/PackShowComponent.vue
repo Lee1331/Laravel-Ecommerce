@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full sm:h-1-2 flex flex-wrap px-12 sm:pt-12 sm:pb-6 text-copy-secondary block relative">
+    <div class="w-full sm:h-1-2 flex flex-wrap px-12 sm:pb-6 text-copy-secondary block relative">
         <div class=" w-full lg:w-1/3 lg:ml-auto h-45vh lg:h-1/2 bg-background-accent-1 pr-6">
             <img class="h-full object-fill overflow-hidden bg-cover bg-center content-center
             object-scale-down sm:object-contain
@@ -24,8 +24,7 @@
             <hr class="pb-6">
 
             <div class="w-full md:w-auto inline-block lg:text-left break-words text-lg pb-6 text-copy-ternary flex flex-wrap ">
-                <h3 class="pb-3">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h3>
-                <h3>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h3>
+                <h3 class="pb-3">{{ this.description }}</h3>
             </div>
             <button class="px-4 py-2 w-48 border rounded border-white hover:bg-background-accent1 bg-background-secondary shadow">Add to Cart</button>
         </div>
@@ -44,6 +43,10 @@
                 required: true,
             },
             name: {
+                type: String,
+                required: true,
+            },
+            description: {
                 type: String,
                 required: true,
             },

@@ -2433,7 +2433,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     amount: {
@@ -2445,6 +2444,10 @@ __webpack_require__.r(__webpack_exports__);
       required: true
     },
     name: {
+      type: String,
+      required: true
+    },
+    description: {
       type: String,
       required: true
     },
@@ -39277,7 +39280,7 @@ var render = function() {
     "div",
     {
       staticClass:
-        "w-full sm:h-1-2 flex flex-wrap px-12 sm:pt-12 sm:pb-6 text-copy-secondary block relative"
+        "w-full sm:h-1-2 flex flex-wrap px-12 sm:pb-6 text-copy-secondary block relative"
     },
     [
       _c(
@@ -39344,7 +39347,18 @@ var render = function() {
           _vm._v(" "),
           _c("hr", { staticClass: "pb-6" }),
           _vm._v(" "),
-          _vm._m(0),
+          _c(
+            "div",
+            {
+              staticClass:
+                "w-full md:w-auto inline-block lg:text-left break-words text-lg pb-6 text-copy-ternary flex flex-wrap "
+            },
+            [
+              _c("h3", { staticClass: "pb-3" }, [
+                _vm._v(_vm._s(this.description))
+              ])
+            ]
+          ),
           _vm._v(" "),
           _c(
             "button",
@@ -39359,33 +39373,7 @@ var render = function() {
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "w-full md:w-auto inline-block lg:text-left break-words text-lg pb-6 text-copy-ternary flex flex-wrap "
-      },
-      [
-        _c("h3", { staticClass: "pb-3" }, [
-          _vm._v(
-            "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-          )
-        ]),
-        _vm._v(" "),
-        _c("h3", [
-          _vm._v(
-            "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-          )
-        ])
-      ]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
