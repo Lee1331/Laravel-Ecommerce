@@ -22,7 +22,7 @@ class Pack extends Model
         return $this->belongsToMany('App\Tag');
     }
 
-    public function owner(){
+    public function author(){
         return $this->belongsTo('App\User', 'author_id');
     }
 }

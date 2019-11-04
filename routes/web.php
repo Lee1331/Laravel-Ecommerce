@@ -24,6 +24,11 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
     Route::resource('/users', 'UsersController', ['except' => ['show' , 'create', 'store']]);
 });
 
+Route::namespace('Author')->prefix('author')->name('author.')->middleware('can:manage-packs')->group(function(){
+
+    Route::resource('/packs', 'PackController', ['except' => ['show']]);
+});
+
 // Route::namespace('Store')->prefix('store')->name('store.')->group(function(){
 
 //     Route::resource('/', 'StoreController');
