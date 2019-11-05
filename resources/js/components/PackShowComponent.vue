@@ -10,12 +10,14 @@
         <div class="w-full lg:w-1/3 lg:mr-auto h-1/2 lg:h-half sm:h-45vh bg-background-accent-1 lg:pl-6 pr-0 md:pr-12 lg:pr-0 xl:pr-12">
             <div class="inline-block text-left break-words pt-3 sm:pt-0">
                 <h1 class="text-2xl md:text-3xl pb-2">{{ this.name }}</h1>
-                <h1 class="text-lg pb-4 text-copy-ternary">by {{ this.author }}</h1>
+                <a :href="`/store/${ this.author }`">
+                    <h1 class="text-lg pb-4 text-copy-ternary">by {{ this.author }}</h1>
+                </a>
             </div>
             <div class="w-full md:w-auto flex flex-wrap lg:text-left break-words text-lg">
                 <h3 class="pb-3 mr-6 text-2xl">{{ displayAmount }}</h3>
                 <h3 v-for="tag in tags" class="pb-3 mr-3">
-                    <a href="/">
+                    <a :href="`/store/tags/${ tag }`">
                         {{ tag }}
                     </a>
                 </h3>

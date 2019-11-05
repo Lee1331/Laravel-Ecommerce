@@ -2342,6 +2342,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     amount: {
@@ -2400,6 +2402,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -39216,11 +39220,15 @@ var render = function() {
             ),
             _vm._v(" "),
             _c("div", { staticClass: "flex justify-between" }, [
-              _c(
-                "p",
-                { staticClass: "text-gray-700 text-base mb-1 cursor-pointer" },
-                [_vm._v("by " + _vm._s(this.author))]
-              ),
+              _c("a", { attrs: { href: "/store/" + this.author } }, [
+                _c(
+                  "p",
+                  {
+                    staticClass: "text-gray-700 text-base mb-1 cursor-pointer"
+                  },
+                  [_vm._v("by " + _vm._s(this.author))]
+                )
+              ]),
               _vm._v(" "),
               _c(
                 "p",
@@ -39243,7 +39251,7 @@ var render = function() {
                 "inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2 cursor-pointer hover:text-copy-ternary"
             },
             [
-              _c("a", { attrs: { href: "/" } }, [
+              _c("a", { attrs: { href: "/store/tags/" + tag } }, [
                 _vm._v("\n                #" + _vm._s(tag) + "\n            ")
               ])
             ]
@@ -39313,8 +39321,10 @@ var render = function() {
                 _vm._v(_vm._s(this.name))
               ]),
               _vm._v(" "),
-              _c("h1", { staticClass: "text-lg pb-4 text-copy-ternary" }, [
-                _vm._v("by " + _vm._s(this.author))
+              _c("a", { attrs: { href: "/store/" + this.author } }, [
+                _c("h1", { staticClass: "text-lg pb-4 text-copy-ternary" }, [
+                  _vm._v("by " + _vm._s(this.author))
+                ])
               ])
             ]
           ),
@@ -39332,7 +39342,7 @@ var render = function() {
               _vm._v(" "),
               _vm._l(_vm.tags, function(tag) {
                 return _c("h3", { staticClass: "pb-3 mr-3" }, [
-                  _c("a", { attrs: { href: "/" } }, [
+                  _c("a", { attrs: { href: "/store/tags/" + tag } }, [
                     _vm._v(
                       "\n                    " +
                         _vm._s(tag) +

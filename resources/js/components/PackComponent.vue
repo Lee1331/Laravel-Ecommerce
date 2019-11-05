@@ -6,14 +6,16 @@
             <div class="px-6 py-4 cursor-default">
                 <div class="font-bold text-l md:text-xl mb-2 cursor-pointer">{{ this.name }}</div>
                 <div class="flex justify-between">
-                    <p class="text-gray-700 text-base mb-1 cursor-pointer">by {{ this.author }}</p>
+                    <a :href="`/store/${ this.author }`">
+                        <p class="text-gray-700 text-base mb-1 cursor-pointer">by {{ this.author }}</p>
+                    </a>
                     <p class="text-gray-700 text-base cursor-pointer">{{ displayAmount }}</p>
                 </div>
             </div>
         </div>
         <div class="w-full px-3 py-2 sm:py-3">
             <span v-for="tag in tags" class="inline-block rounded-full px-3 py-1 text-sm font-semibold mr-2 cursor-pointer hover:text-copy-ternary">
-                <a href="/">
+                <a :href="`/store/tags/${ tag }`">
                     #{{ tag }}
                 </a>
             </span>
