@@ -7,6 +7,9 @@ use Illuminate\Support\Str;
 
 class Pack extends Model
 {
+    // public $fillable = ['name', 'description', 'author_id', 'cover_image'];
+    public $guarded = [];
+
     public function getRouteKeyName(){
 
         // return 'slug';

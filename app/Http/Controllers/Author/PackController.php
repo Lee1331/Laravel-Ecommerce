@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Gate;
 use App\Pack;
-
+use App\Http\Requests\StorePackRequest;
 class PackController extends Controller
 {
     public function __construct()
@@ -36,7 +36,8 @@ class PackController extends Controller
      */
     public function create()
     {
-        //
+        return view('author.packs.create');
+
     }
 
     /**
@@ -45,9 +46,21 @@ class PackController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePackRequest $request)
     {
-        //
+
+        // Retrieve the validated input data...
+        $validated = $request->validated();
+
+        $pack = Pack::create(['name' => request('name'),
+            'description' => request('description'),
+            'author_id' => auth()->id(),
+            'cover_image' => request('cover_image')
+        ]);
+
+        $this->storeImage($pack);
+        return redirect()->back();
+
     }
 
     /**
@@ -93,5 +106,23 @@ class PackController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    private function validateRequest(){
+        return request()->validate([
+            'name' => 'required|min:3',
+            'description' => 'required|min:25',
+            'author_id' => 'required',
+            'cover_image' => 'file|image|max:5000'
+        ]);
+    }
+
+    private function storeImage($pack){
+        if(request()->has('cover_image')){
+            $pack->update([
+                // 'cover_image' => request('cover_image')->store('packs', 'public')
+                'cover_image' => request('cover_image')->storeAs('packs', $pack->name, 'public')
+            ]);
+        }
     }
 }

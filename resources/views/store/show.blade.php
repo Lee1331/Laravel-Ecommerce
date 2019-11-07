@@ -10,9 +10,8 @@
             </div>
         </div>
 
-        {{-- <div class=" w-full flex flex-wrap px-12 pt-6 pb-12"> --}}
         <div class=" w-full sm:h-1-2 flex flex-wrap px-12 pb-6 pt-0">
-            <pack-show-component src="{{ asset('img/packs/drumEssentials2.jpeg') }}" name="{{ $pack->name }}" description="{{ $pack->description }}" author="{{ $pack->author->name }}" :tags="{{ json_encode($pack->tags()->get()->pluck('name')->toArray())  }}" :amount="{{ $pack->amount }}"></pack-show-component>
+            <pack-show-component src="{{  asset('storage/' . $pack->cover_image) }}" name="{{ $pack->name }}" description="{{ $pack->description }}" author="{{ $pack->author->name }}" :tags="{{ json_encode($pack->tags()->get()->pluck('name')->toArray())  }}" :amount="{{ $pack->amount }}"></pack-show-component>
         </div>
     </div>
 @endsection

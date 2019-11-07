@@ -18,6 +18,7 @@ $factory->define(Pack::class, function (Faker $faker) {
             $user->roles()->attach($authorRole);
             return $user->id;
         },
+        'cover_image' => 'mixer.jpg',
         'amount' => $faker->randomDigit(),
     ];
 });

@@ -19,6 +19,7 @@ class CreatePacksTable extends Migration
             $table->text('description');
             $table->unsignedBigInteger('author_id');
             $table->foreign('author_id')->references('id')->on('users')->onDelete('cascade');
+            $table->string('cover_image');
             $table->float('amount')->default('0.00');
 
             $table->timestamps();
